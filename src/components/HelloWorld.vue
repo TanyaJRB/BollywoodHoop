@@ -7,17 +7,6 @@ const count = ref(0);
 </script>
 
 <template>
-  <template>
-    <div>
-      <button>
-        <router-link :to="{ name: 'Gallery' }">Gallery New User</router-link>
-      </button>
-      <button>
-        <router-link :to="{ name: 'Pricing' }">Pricing</router-link>
-      </button>
-    </div>
-  </template>
-
   <h1>{{ msg }}</h1>
 
   <div class="card">

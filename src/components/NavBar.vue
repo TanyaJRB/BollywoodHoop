@@ -29,7 +29,7 @@ function openInstagram() {
 </script>
 
 <template>
-  <nav class="bg-black">
+  <nav class="absolute z-20 w-screen">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -61,7 +61,7 @@ function openInstagram() {
             alt="Your Company"
           /> -->
           <img
-            class="hidden h-12 w-auto md:block lg:block"
+            class="hidden h-24 md:block lg:block"
             src="../assets/nobackground-amazon.png"
             alt="The Bollywood Hoop Artist"
           />
@@ -78,25 +78,25 @@ function openInstagram() {
 
               <router-link
                 :to="{ name: 'HomePage' }"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
                 >Home</router-link
               >
 
               <router-link
                 :to="{ name: 'Gallery' }"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
                 >Gallery</router-link
               >
 
               <router-link
                 :to="{ name: 'Pricing' }"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
                 >Pricing</router-link
               >
 
               <router-link
                 :to="{ name: 'Contact' }"
-                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
                 >Contact</router-link
               >
             </div>

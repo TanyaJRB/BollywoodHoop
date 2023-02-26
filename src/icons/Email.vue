@@ -4,7 +4,7 @@
     fill="none"
     viewBox="0 0 24 24"
     stroke-width="1.5"
-    stroke="white"
+    stroke="black"
     class="h-6 w-6"
   >
     <path

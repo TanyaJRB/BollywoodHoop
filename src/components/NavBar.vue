@@ -29,33 +29,20 @@ function openInstagram() {
     "_blank"
   );
 }
+
+const navFontStyleLarge = {
+  "font-family": "Impact",
+};
+
+const navFontStyleSmall = {
+  "font-family": "Arial",
+};
 </script>
 
 <template>
   <nav class="absolute z-20 w-screen">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-          <!-- Mobile menu button-->
-          <button
-            type="button"
-            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-            aria-controls="mobile-menu"
-            aria-expanded="false"
-            @click="toggleMobileMenu(true)"
-          >
-            <span class="sr-only">Open main menu</span>
-            <!--
-            Icon when menu is closed.
-            Menu open: "hidden", Menu closed: "block"
-          -->
-            <MenuButton></MenuButton>
-            <!--
-            Icon when menu is open.
-            Menu open: "block", Menu closed: "hidden"
-          --></button>
-        </div>
-
         <!-- LOGO -->
         <div class="flex flex-shrink-0 items-center">
           <!-- <img
@@ -70,52 +57,36 @@ function openInstagram() {
           />
         </div>
 
-        <div
-          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center"
-        >
+        <div class="flex flex-1 sm:items-stretch sm:justify-center">
           <!-- NAV ITEMS -->
 
-          <div class="hidden sm:ml-6 sm:block">
-            <div class="flex justify-center space-x-4">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-
+          <div class="sm:ml-6 sm:block">
+            <div class="flex justify-center lg:space-x-4">
               <router-link
                 :to="{ name: 'HomePage' }"
-                class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
-                style="
-                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
-                    sans-serif, sans-serif;
-                "
+                class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
+                :style="navFontStyleSmall"
                 >Home</router-link
               >
 
               <router-link
                 :to="{ name: 'Gallery' }"
-                class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
-                style="
-                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
-                    sans-serif;
-                "
+                class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
+                :style="navFontStyleSmall"
                 >Gallery</router-link
               >
 
               <router-link
                 :to="{ name: 'Pricing' }"
-                class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
-                style="
-                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
-                    sans-serif;
-                "
+                class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
+                :style="navFontStyleSmall"
                 >Pricing</router-link
               >
 
               <router-link
                 :to="{ name: 'Contact' }"
-                class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
-                style="
-                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
-                    sans-serif;
-                "
+                class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
+                :style="navFontStyleSmall"
                 >Contact</router-link
               >
             </div>
@@ -129,10 +100,12 @@ function openInstagram() {
           <div class="relative ml-3">
             <div>
               <button @click="openInstagram">
-                <InstagramLogo class="h-8 w-8"></InstagramLogo>
+                <InstagramLogo class="h-5 w-5 sm:h-8 sm:w-8"></InstagramLogo>
               </button>
               <button @click="openInstagram">
-                <Email class="mb-1 ml-2 h-6 w-6"></Email>
+                <Email
+                  class="mb-0.5 h-4 w-4 sm:mb-1 sm:ml-2 sm:h-6 sm:w-6"
+                ></Email>
               </button>
             </div>
           </div>

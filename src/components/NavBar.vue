@@ -24,7 +24,10 @@ const selectedTabClass =
   "rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white";
 
 function openInstagram() {
-  window.location.href = "https://instagram.com";
+  window.open(
+    "https://instagram.com/bollywoodaerialist?igshid=YmMyMTA2M2Y=",
+    "_blank"
+  );
 }
 </script>
 
@@ -79,24 +82,40 @@ function openInstagram() {
               <router-link
                 :to="{ name: 'HomePage' }"
                 class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
+                style="
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+                    sans-serif, sans-serif;
+                "
                 >Home</router-link
               >
 
               <router-link
                 :to="{ name: 'Gallery' }"
                 class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
+                style="
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+                    sans-serif;
+                "
                 >Gallery</router-link
               >
 
               <router-link
                 :to="{ name: 'Pricing' }"
                 class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
+                style="
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+                    sans-serif;
+                "
                 >Pricing</router-link
               >
 
               <router-link
                 :to="{ name: 'Contact' }"
                 class="text-m rounded-md px-3 py-2 font-medium text-black hover:bg-black hover:text-white"
+                style="
+                  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold',
+                    sans-serif;
+                "
                 >Contact</router-link
               >
             </div>

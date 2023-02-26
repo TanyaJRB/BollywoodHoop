@@ -3,6 +3,9 @@ import { ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
 import MenuButton from "../icons/MenuButton.vue";
 import MenuButtonOpen from "../icons/MenuButton.vue";
+import InstagramLogo from "../icons/InstagramLogo.vue";
+import Email from "../icons/Email.vue";
+
 const showProfileMenu = ref(false);
 const showMobileMenu = ref(false);
 
@@ -16,10 +19,17 @@ const componentWrapperElement = ref<HTMLElement>();
 onClickOutside(componentWrapperElement, () => {
   toggleMobileMenu(false);
 });
+
+const selectedTabClass =
+  "rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white";
+
+function openInstagram() {
+  window.location.href = "https://instagram.com";
+}
 </script>
 
 <template>
-  <nav class="bg-gray-800">
+  <nav class="bg-black">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -51,114 +61,60 @@ onClickOutside(componentWrapperElement, () => {
             alt="Your Company"
           /> -->
           <img
-            class="hidden h-24 w-auto md:block lg:block"
-            src="../assets/Picture2-removebg-preview.png"
-            alt="Bollywood Hoop Artist"
+            class="hidden h-12 w-auto md:block lg:block"
+            src="../assets/nobackground-amazon.png"
+            alt="The Bollywood Hoop Artist"
           />
         </div>
 
         <div
-          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center"
         >
           <!-- NAV ITEMS -->
 
           <div class="hidden sm:ml-6 sm:block">
-            <div class="flex space-x-4">
+            <div class="flex justify-center space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a
-                href="#"
-                class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                aria-current="page"
-                >Dashboard</a
+
+              <router-link
+                :to="{ name: 'HomePage' }"
+                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >Home</router-link
               >
 
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'Gallery' }"
                 class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >Team</a
+                >Gallery</router-link
               >
 
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'Pricing' }"
                 class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >Projects</a
+                >Pricing</router-link
               >
 
-              <a
-                href="#"
+              <router-link
+                :to="{ name: 'Contact' }"
                 class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                >Calendar</a
+                >Contact</router-link
               >
             </div>
           </div>
         </div>
 
-        <!-- PROFILE DROPDOWN -->
+        <!-- Insta and Email -->
         <div
           class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
         >
-          <!-- Profile dropdown -->
           <div class="relative ml-3">
             <div>
-              <button
-                type="button"
-                class="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                id="user-menu-button"
-                aria-expanded="false"
-                aria-haspopup="true"
-              >
-                <span class="sr-only">Open user menu</span>
-                <img
-                  class="h-8 w-8 rounded-full"
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt=""
-                />
+              <button @click="openInstagram">
+                <InstagramLogo class="h-8 w-8"></InstagramLogo>
               </button>
-            </div>
-
-            <!--
-            Dropdown menu, show/hide based on menu state.
-
-            Entering: "transition ease-out duration-100"
-              From: "transform opacity-0 scale-95"
-              To: "transform opacity-100 scale-100"
-            Leaving: "transition ease-in duration-75"
-              From: "transform opacity-100 scale-100"
-              To: "transform opacity-0 scale-95"
-          -->
-            <div
-              class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="user-menu-button"
-              tabindex="-1"
-              v-if="showProfileMenu"
-            >
-              <!-- Active: "bg-gray-100", Not Active: "" -->
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabindex="-1"
-                id="user-menu-item-0"
-                >Your Profile</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabindex="-1"
-                id="user-menu-item-1"
-                >Settings</a
-              >
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700"
-                role="menuitem"
-                tabindex="-1"
-                id="user-menu-item-2"
-                >Sign out</a
-              >
+              <button @click="openInstagram">
+                <Email class="mb-1 ml-2 h-6 w-6"></Email>
+              </button>
             </div>
           </div>
         </div>
@@ -166,6 +122,7 @@ onClickOutside(componentWrapperElement, () => {
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
+
     <div
       ref="componentWrapperElement"
       class="sm:hidden"
@@ -201,26 +158,4 @@ onClickOutside(componentWrapperElement, () => {
       </div>
     </div>
   </nav>
-  <!-- <div class="bg-slate-700">
-    <a
-      class="text-m px-2 py-2 text-gray-500 hover:text-blue-600 md:px-3 lg:px-6"
-    >
-      <router-link :to="{ name: 'HomePage' }">Home</router-link>
-    </a>
-    <a
-      class="text-m px-2 py-2 text-gray-500 hover:text-blue-600 md:px-3 lg:px-6"
-    >
-      <router-link :to="{ name: 'Gallery' }">Gallery</router-link>
-    </a>
-    <a
-      class="text-m px-2 py-2 text-gray-500 hover:text-blue-600 md:px-3 lg:px-6"
-    >
-      <router-link :to="{ name: 'Pricing' }">Pricing</router-link>
-    </a>
-    <a
-      class="text-m px-2 py-2 text-gray-500 hover:text-blue-600 md:px-3 lg:px-6"
-    >
-      <router-link :to="{ name: 'Contact' }">Contact</router-link>
-    </a>
-  </div> -->
 </template>

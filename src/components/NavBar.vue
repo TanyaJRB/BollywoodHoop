@@ -52,7 +52,7 @@ const navFontStyleSmall = {
           /> -->
           <img
             class="hidden h-24 md:block lg:block"
-            src="../assets/nobackground-amazon.png"
+            src="../assets/svg/nobackground-amazon.png"
             alt="The Bollywood Hoop Artist"
           />
         </div>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const logoStyleNarrow = {
-  height: "11rem",
-  "margin-bottom": "35rem",
-  "margin-left": "11rem",
-};
+// const logoStyleNarrow = {
+//   height: "11rem",
+//   "margin-bottom": "35rem",
+//   "margin-left": "11rem",
+// };
 </script>
 
 <template>
@@ -12,28 +12,28 @@ const logoStyleNarrow = {
   >
     <img
       src="../assets/Close-up-hoop.jpg"
-      class="relative z-0 hidden w-full lg:block"
+      class="relative z-0 hidden h-screen w-full object-cover lg:block"
     />
     <div class="absolute inset-0 z-10 flex items-center justify-center">
-      <!-- <p class="text-2xl font-bold">The Bollywood Hoop Artist</p> -->
       <img
         src="../assets/bollywood-aerialist-logo.png"
         class="hidden pt-80 sm:block"
       />
     </div>
+
     <!-- MOBILE -->
-    <div class="bg-black">
-      <img
-        src="../assets/Standingpose-narrow-2.jpg"
-        class="h-screen object-none sm:block lg:hidden"
-      />
-    </div>
+    <img
+      src="../assets/Amazon.jpg"
+      class="h-screen w-screen object-cover sm:block lg:hidden"
+    />
     <div class="absolute inset-0 z-10 flex items-center justify-center">
-      <!-- <p class="text-2xl font-bold">The Bollywood Hoop Artist</p> -->
+      <!-- <img
+        src="../assets/bollywood-logo-white.png"
+        class="w-80 pt-80 sm:hidden"
+      /> -->
       <img
-        src="../assets/bollywood_aerialist_logo_2.png"
-        :style="logoStyleNarrow"
-        class="sm:hidden"
+        src="../assets/bollywood-aerialist-logo.png"
+        class="w-80 pt-80 sm:hidden"
       />
     </div>
   </div>

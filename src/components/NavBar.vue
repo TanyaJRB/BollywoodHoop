@@ -100,12 +100,10 @@ const navFontStyleSmall = {
           <div class="relative ml-3">
             <div>
               <button @click="openInstagram">
-                <InstagramLogo class="h-5 w-5 sm:h-8 sm:w-8"></InstagramLogo>
+                <InstagramLogo class="h-7 w-7 sm:h-8 sm:w-8"></InstagramLogo>
               </button>
               <button @click="openInstagram">
-                <Email
-                  class="mb-0.5 h-4 w-4 sm:mb-1 sm:ml-2 sm:h-6 sm:w-6"
-                ></Email>
+                <Email class="mb-0.5 h-4 sm:mb-1 sm:ml-2 sm:h-6 sm:w-6"></Email>
               </button>
             </div>
           </div>

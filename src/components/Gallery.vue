@@ -16,7 +16,7 @@ const images = ref([
 </script>
 
 <template>
-  <div class="container flex flex flex-col justify-center bg-amber-600">
+  <div class="container flex flex flex-col justify-center bg-black">
     <div class="flex flex-row justify-center gap-10 pt-20 pb-10">
       <img
         src="../assets/photos/CloseUp.jpg"

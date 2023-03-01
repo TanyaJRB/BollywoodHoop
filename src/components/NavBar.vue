@@ -5,6 +5,8 @@ import MenuButton from "../icons/MenuButton.vue";
 import MenuButtonOpen from "../icons/MenuButton.vue";
 import InstagramLogo from "../icons/InstagramLogo.vue";
 import Email from "../icons/Email.vue";
+import { useDisplay } from "../assets/composables/use.display";
+import { text } from "stream/consumers";
 
 const showProfileMenu = ref(false);
 const showMobileMenu = ref(false);
@@ -32,10 +34,25 @@ function openInstagram() {
 
 const navFontStyleLarge = {
   "font-family": "Impact",
+  color: "red",
 };
 
 const navFontStyleSmall = {
   "font-family": "Arial",
+  color: "red",
+};
+
+// const navItemClass = ():string => {
+//     return "sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white";
+// }
+
+const { isGalleryOpen } = useDisplay();
+
+const textColor = isGalleryOpen ? "white" : "black";
+
+const navFontStyle = {
+  color: textColor,
+  fontFamily: "Helvetica, sans-serif",
 };
 </script>
 
@@ -65,28 +82,28 @@ const navFontStyleSmall = {
               <router-link
                 :to="{ name: 'HomePage' }"
                 class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
-                :style="navFontStyleSmall"
+                :style="navFontStyle"
                 >Home</router-link
               >
 
               <router-link
                 :to="{ name: 'Gallery' }"
                 class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
-                :style="navFontStyleSmall"
+                :style="navFontStyle"
                 >Gallery</router-link
               >
 
               <router-link
                 :to="{ name: 'Pricing' }"
                 class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
-                :style="navFontStyleSmall"
+                :style="navFontStyle"
                 >Pricing</router-link
               >
 
               <router-link
                 :to="{ name: 'Contact' }"
                 class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
-                :style="navFontStyleSmall"
+                :style="navFontStyle"
                 >Contact</router-link
               >
             </div>

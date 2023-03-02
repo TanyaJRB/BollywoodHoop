@@ -47,11 +47,10 @@ const navFontStyleSmall = {
 // }
 
 const { isGalleryOpen } = useDisplay();
-
 const textColor = isGalleryOpen ? "white" : "black";
 
 const navFontStyle = {
-  color: textColor,
+  //   color: textColor,
   fontFamily: "Helvetica, sans-serif",
 };
 </script>

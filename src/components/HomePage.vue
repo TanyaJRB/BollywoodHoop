@@ -7,6 +7,7 @@
 </script>
 
 <template>
+  <!-- <NavBar class="absolute w-screen z-10"></NavBar> -->
   <div
     class="flex w-full items-center justify-center bg-orange-400 sm:h-screen"
   >

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
 import MenuButton from "../icons/MenuButton.vue";
 import MenuButtonOpen from "../icons/MenuButton.vue";
@@ -7,8 +7,10 @@ import InstagramLogo from "../icons/InstagramLogo.vue";
 import Email from "../icons/Email.vue";
 import { useDisplay } from "../assets/composables/use.display";
 import { text } from "stream/consumers";
+import NavItem from "./NavItem.vue";
+import { useRouter, useRoute, RouteLocationNormalizedLoaded } from "vue-router";
 
-const { openInstagram, emailMe, isHomePageOpen } = useDisplay();
+const { openInstagram, emailMe, activePage } = useDisplay();
 
 // MOBILE STUFF
 
@@ -39,33 +41,30 @@ const navFontStyleSmall = {
   color: "red",
 };
 
-// const navItemClass = ():string => {
-//     return "sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white";
-// }
-
-// const { isGalleryOpen } = useDisplay();
-// const textColor = isGalleryOpen ? "white" : "black";
-
-const navFontStyle = {
-  //   color: textColor,
-  fontFamily: "Helvetica, sans-serif",
-};
+const navClass = computed<string>(() => {
+  const mediumSizeClass = "px-4 py-2 text-base";
+  const isHomePageOpen = activePage.value == "Home";
+  const navClass = isHomePageOpen
+    ? "absolute z-20 w-screen"
+    : "absolute z-20 w-screen bg-zinc-900";
+  return navClass;
+});
 </script>
 
 <template>
-  <nav class="absolute z-20 w-screen">
+  <nav :class="navClass">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <!-- LOGO -->
         <div class="flex flex-shrink-0 items-center">
           <!-- <img
-            class="block h-8 w-auto lg:hidden"
-            src="../assets/Picture1-removebg-preview.png"
-            alt="Your Company"
+            class="hidden h-24 md:block lg:block"
+            src="../assets/svg/nobackground-amazon.png"
+            alt="The Bollywood Hoop Artist"
           /> -->
           <img
             class="hidden h-24 md:block lg:block"
-            src="../assets/svg/nobackground-amazon.png"
+            src="../assets/svg/nobackground-amazon-CROPPED.png"
             alt="The Bollywood Hoop Artist"
           />
         </div>
@@ -75,33 +74,22 @@ const navFontStyle = {
 
           <div class="sm:ml-6 sm:block">
             <div class="flex justify-center lg:space-x-4">
-              <router-link
-                :to="{ name: 'HomePage' }"
-                class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
-                :style="navFontStyle"
-                >Home</router-link
-              >
-
-              <router-link
-                :to="{ name: 'Gallery' }"
-                class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
-                :style="navFontStyle"
-                >Gallery</router-link
-              >
-
-              <router-link
-                :to="{ name: 'Packages' }"
-                class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
-                :style="navFontStyle"
-                >Packages</router-link
-              >
-
-              <router-link
-                :to="{ name: 'Contact' }"
-                class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
-                :style="navFontStyle"
-                >Contact</router-link
-              >
+              <NavItem
+                :router-link-to="'HomePage'"
+                :nav-title="'Home'"
+              ></NavItem>
+              <NavItem
+                :router-link-to="'Gallery'"
+                :nav-title="'Gallery'"
+              ></NavItem>
+              <NavItem
+                :router-link-to="'Packages'"
+                :nav-title="'Packages'"
+              ></NavItem>
+              <NavItem
+                :router-link-to="'Contact'"
+                :nav-title="'Contact'"
+              ></NavItem>
             </div>
           </div>
         </div>

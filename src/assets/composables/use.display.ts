@@ -1,12 +1,14 @@
 import { createSharedComposable } from "@vueuse/core";
-import { Ref, ref, ShallowRef, shallowRef } from "vue";
+import { Ref, ref } from "vue";
 
 const isHomePageOpen = ref(true);
+const activePage = ref("Home");
 
 interface useDisplayReturn {
   openInstagram: () => void;
   emailMe: () => void;
   isHomePageOpen: Ref<boolean>;
+  activePage: Ref<string>;
 }
 
 function useDisplayComposable(): useDisplayReturn {
@@ -24,6 +26,7 @@ function useDisplayComposable(): useDisplayReturn {
     openInstagram,
     emailMe,
     isHomePageOpen,
+    activePage,
   };
 }
 

@@ -93,10 +93,10 @@ const navFontStyle = {
               >
 
               <router-link
-                :to="{ name: 'Pricing' }"
+                :to="{ name: 'Packages' }"
                 class="sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
                 :style="navFontStyle"
-                >Pricing</router-link
+                >Packages</router-link
               >
 
               <router-link

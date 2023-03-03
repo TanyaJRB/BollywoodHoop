@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../components/HomePage.vue";
 import Gallery from "../components/Gallery.vue";
-import Pricing from "../components/Pricing.vue";
+import Packages from "../components/Packages.vue";
 import Contact from "../components/Contact.vue";
 
 const routes = [
@@ -16,9 +16,9 @@ const routes = [
     component: Gallery,
   },
   {
-    path: "/pricing",
-    name: "Pricing",
-    component: Pricing,
+    path: "/packages",
+    name: "Packages",
+    component: Packages,
   },
   {
     path: "/contact",

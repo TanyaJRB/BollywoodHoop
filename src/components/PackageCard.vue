@@ -4,7 +4,7 @@ import PackageMoreInformation from "./PackageMoreInformation.vue";
 import IconClose from "../icons/IconClose.vue";
 import.meta.env.BASE_URL;
 
-const props = defineProps<{ packageTitle: string; imageSrc: string }>();
+const props = defineProps<{ packageTitle: string }>();
 
 const showMoreInformation = ref(false);
 
@@ -47,7 +47,7 @@ const packageTitleStyle = {
       class="block max-w-sm rounded-lg bg-zinc-900 shadow-lg dark:bg-neutral-700"
     >
       <a href="#!">
-        <img class="rounded-t-lg" :src="imageSrc" alt="" />
+        <img class="rounded-t-lg" :src="packageImgSrc" alt="" />
       </a>
       <div class="p-6">
         <h5

@@ -8,6 +8,10 @@ import Email from "../icons/Email.vue";
 import { useDisplay } from "../assets/composables/use.display";
 import { text } from "stream/consumers";
 
+const { openInstagram, emailMe, isHomePageOpen } = useDisplay();
+
+// MOBILE STUFF
+
 const showProfileMenu = ref(false);
 const showMobileMenu = ref(false);
 
@@ -25,17 +29,6 @@ onClickOutside(componentWrapperElement, () => {
 const selectedTabClass =
   "rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white";
 
-function openInstagram() {
-  window.open(
-    "https://instagram.com/bollywoodaerialist?igshid=YmMyMTA2M2Y=",
-    "_blank"
-  );
-}
-
-function emailMe() {
-  window.open("mailto:bollywoodhoop@outlook.com", "_blank");
-}
-
 const navFontStyleLarge = {
   "font-family": "Impact",
   color: "red",
@@ -50,8 +43,8 @@ const navFontStyleSmall = {
 //     return "sm:text-m rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-black hover:text-white";
 // }
 
-const { isGalleryOpen } = useDisplay();
-const textColor = isGalleryOpen ? "white" : "black";
+// const { isGalleryOpen } = useDisplay();
+// const textColor = isGalleryOpen ? "white" : "black";
 
 const navFontStyle = {
   //   color: textColor,

@@ -8,7 +8,7 @@ const senderMessage = ref("");
 const senderName = ref("");
 const senderPhone = ref("");
 
-const enquirySubmitted = ref(true);
+const enquirySubmitted = ref(false);
 
 async function sendEnquiry() {
   if (senderEmail.value == null || senderPhone == null) {
@@ -30,8 +30,12 @@ async function sendEnquiry() {
     .then(
       (result) => {
         console.log("SUCCESS!", result);
+        enquirySubmitted.value = true;
       },
       (error) => {
+        alert(
+          "There was an error submitting the form. Please try again or send us an email using the address provided."
+        );
         console.log("FAILED...", error);
       }
     );
@@ -112,13 +116,6 @@ async function sendEnquiry() {
                   v-model="senderMessage"
                   name="senderMessage"
                 ></textarea>
-                <!-- <input
-                  placeholder="Your Message"
-                  class="text-body-color focus:border-primary w-full resize-none rounded border border-[f0f0f0] py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
-                  v-model="senderMessage"
-                  name="senderMessage"
-                  type="text"
-                /> -->
               </div>
               <div>
                 <button

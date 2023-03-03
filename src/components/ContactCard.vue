@@ -2,6 +2,10 @@
 import IconPhone from "../icons/IconPhone.vue";
 import Email2 from "../icons/Email2.vue";
 import InstagramBlack from "../icons/InstagramBlack.vue";
+import { useDisplay } from "../assets/composables/use.display";
+
+const { openInstagram, emailMe } = useDisplay();
+
 const props = defineProps<{ icon: string }>();
 
 let cardText = "";
@@ -26,10 +30,15 @@ switch (props.icon) {
 <template>
   <div class="mb-1 flex h-14 w-3/4 flex-row sm:h-20 sm:w-2/3">
     <IconPhone v-if="icon == 'phone'" class="h-1/3 w-1/3"></IconPhone>
-    <Email2 v-if="icon == 'email'" class="h-1/3 w-1/3"></Email2>
+    <Email2
+      v-if="icon == 'email'"
+      class="h-1/3 w-1/3 hover:cursor-pointer"
+      @click="emailMe"
+    ></Email2>
     <InstagramBlack
       v-if="icon == 'instagram'"
-      class="h-1/3 w-1/3"
+      class="h-1/3 w-1/3 hover:cursor-pointer"
+      @click="openInstagram"
     ></InstagramBlack>
     <div class="w-2/3">
       <h4 class="text-dark mb-1 text-sm sm:block sm:text-xl">

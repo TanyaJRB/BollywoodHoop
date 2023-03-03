@@ -1,21 +1,29 @@
 import { createSharedComposable } from "@vueuse/core";
 import { Ref, ref, ShallowRef, shallowRef } from "vue";
 
-const isGalleryOpen = ref(false);
+const isHomePageOpen = ref(true);
 
-interface useHeaderReturn {
-  isGalleryOpen: Ref<boolean>;
-  printHeaderExampleFunction: () => void;
+interface useDisplayReturn {
+  openInstagram: () => void;
+  emailMe: () => void;
+  isHomePageOpen: Ref<boolean>;
 }
 
-function useDisplayComposable(): useHeaderReturn {
-  function printHeaderExampleFunction(): void {
-    console.log("Example");
+function useDisplayComposable(): useDisplayReturn {
+  function openInstagram() {
+    window.open(
+      "https://instagram.com/bollywoodaerialist?igshid=YmMyMTA2M2Y=",
+      "_blank"
+    );
   }
 
+  function emailMe() {
+    window.open("mailto:bollywoodhoop@outlook.com", "_blank");
+  }
   return {
-    isGalleryOpen,
-    printHeaderExampleFunction,
+    openInstagram,
+    emailMe,
+    isHomePageOpen,
   };
 }
 

@@ -12,26 +12,22 @@ let packageTitleTextColor = "";
 let packageText = "";
 let packageImgSrc = "src/assets/photos/CloseUp.jpg";
 
-const packageTextBronze = `One choreographed performance during the event.`;
-const packageTextSilver = `One choreographed performance and one ambient set during the event.`;
-const packageTextGold = `One choreographed performance and two ambient sets (or two performances and one ambient set) during the event.`;
-
-console.log(props.packageTitle);
-
 switch (props.packageTitle) {
   case "Bronze":
     packageTitleTextColor = "#b55538";
-    packageText = packageTextBronze;
+    packageText = "One choreographed performance during the event.";
     packageImgSrc = "src/assets/photos/CloseUp.jpg";
     break;
   case "Silver":
     packageTitleTextColor = "#A2A2A2";
-    packageText = packageTextSilver;
+    packageText =
+      "One choreographed performance and one ambient set during the event.";
     packageImgSrc = "src/assets/photos/ManInMoon.jpg";
     break;
   case "Gold":
     packageTitleTextColor = "#FAAE37";
-    packageText = packageTextGold;
+    packageText =
+      "One choreographed performance and two ambient sets (or two performances and one ambient set) during the event.";
     packageImgSrc = "src/assets/photos/FloorPose.jpg";
     break;
   default:

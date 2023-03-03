@@ -46,9 +46,7 @@ const packageTitleStyle = {
     <div
       class="block max-w-sm rounded-lg bg-zinc-900 shadow-lg dark:bg-neutral-700"
     >
-      <a href="#!">
-        <img class="rounded-t-lg" :src="packageImgSrc" alt="" />
-      </a>
+      <img class="rounded-t-lg" :src="packageImgSrc" alt="" />
       <div class="p-6">
         <h5
           class="mb-2 text-xl font-medium leading-tight text-amber-600 dark:text-neutral-50"

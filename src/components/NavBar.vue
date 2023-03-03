@@ -32,6 +32,10 @@ function openInstagram() {
   );
 }
 
+function emailMe() {
+  window.open("mailto:bollywoodhoop@outlook.com", "_blank");
+}
+
 const navFontStyleLarge = {
   "font-family": "Impact",
   color: "red",
@@ -118,7 +122,7 @@ const navFontStyle = {
               <button @click="openInstagram">
                 <InstagramLogo class="h-7 w-7 sm:h-8 sm:w-8"></InstagramLogo>
               </button>
-              <button @click="openInstagram">
+              <button @click="emailMe">
                 <Email class="mb-0.5 h-4 sm:mb-1 sm:ml-2 sm:h-6 sm:w-6"></Email>
               </button>
             </div>

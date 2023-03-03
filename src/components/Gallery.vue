@@ -32,45 +32,53 @@ const images = ref([
   <div
     class="container absolute z-10 flex flex-col justify-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800"
   >
-    <div class="flex flex-row justify-center gap-10 pt-28 pb-10">
-      <img
-        src="../assets/photos/CloseUp.jpg"
-        class="w-1/3 rounded shadow-xl hover:scale-150"
-      />
-      <img
-        src="../assets/photos/FloorPose.jpg"
-        class="w-1/3 rounded shadow-xl hover:scale-150"
-      />
-    </div>
-    <div class="grid grid-flow-col grid-rows-2 justify-center gap-10">
-      <img
-        src="../assets/photos/Amazon.jpg"
-        class="w-60 rounded shadow-xl hover:scale-150"
-      />
-      <img
-        src="../assets/photos/BendyWaist.jpg"
-        class="w-60 rounded shadow-xl hover:scale-150"
-      />
-      <img
-        src="../assets/photos/PushAway.jpg"
-        class="w-60 rounded shadow-xl hover:scale-150"
-      />
-      <img
-        src="../assets/photos/StandingPose1.jpg"
-        class="w-60 rounded shadow-xl hover:scale-150"
-      />
-      <img
-        src="../assets/photos/StandingPose2.jpg"
-        class="w-60 rounded shadow-xl hover:scale-150"
-      />
-      <img
-        src="../assets/photos/WaistBalance.jpg"
-        class="w-60 rounded shadow-xl hover:scale-150"
-      />
-      <img
-        src="../assets/photos/WineGlass.jpg"
-        class="w-60 rounded shadow-xl hover:scale-150"
-      />
+    <div class="relative z-20 mx-28 mt-28 h-full rounded">
+      <div
+        class="grid grid-flow-col grid-rows-2 justify-center gap-5 px-5 pt-5 pb-10"
+      >
+        <img
+          src="../assets/photos/Amazon.jpg"
+          class="w-60 border-4 border-white shadow-xl hover:scale-150"
+        />
+        <img
+          src="../assets/photos/BendyWaist.jpg"
+          class="w-60 border-4 border-white shadow-xl hover:scale-150"
+        />
+        <img
+          src="../assets/photos/PushAway.jpg"
+          class="w-60 rounded border-4 border-white shadow-xl hover:scale-150"
+        />
+        <img
+          src="../assets/photos/StandingPose1.jpg"
+          class="w-60 rounded border-4 border-white shadow-xl hover:scale-150"
+        />
+        <img
+          src="../assets/photos/StandingPose2.jpg"
+          class="w-60 rounded border-4 border-white shadow-xl hover:scale-150"
+        />
+        <img
+          src="../assets/photos/WaistBalance.jpg"
+          class="w-60 rounded border-4 border-white shadow-xl hover:scale-150"
+        />
+        <img
+          src="../assets/photos/WineGlass.jpg"
+          class="w-60 rounded border-4 border-white shadow-xl hover:scale-150"
+        />
+        <img
+          src="../assets/photos/SingleLegTop.jpg"
+          class="w-60 rounded border-4 border-white shadow-xl hover:scale-150"
+        />
+      </div>
+      <div class="mb-5 flex flex-row justify-center gap-5">
+        <img
+          src="../assets/photos/CloseUp.jpg"
+          class="w-1/3 rounded border-4 border-white shadow-xl hover:scale-150"
+        />
+        <img
+          src="../assets/photos/FloorPose.jpg"
+          class="w-1/3 rounded border-4 border-white shadow-xl hover:scale-150"
+        />
+      </div>
     </div>
   </div>
   <!-- </div> -->

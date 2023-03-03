@@ -4,17 +4,21 @@ import ContactCard from "./ContactCard.vue";
 
 <template>
   <!-- ====== Contact Section Start -->
-  <section
-    class="relative z-10 overflow-hidden bg-white p-14 lg:p-40 lg:py-[120px]"
+  <div
+    class="flex w-full overflow-hidden bg-gradient-to-r from-rose-400 to-orange-300 p-14 lg:p-40 lg:py-[120px]"
   >
-    <div class="container mx-auto">
+    <!-- <img
+      src="../assets/photos/CloseUp.jpg"
+      class="relative inset-0 z-0 object-cover"
+    /> -->
+    <div class="container mx-auto flex">
       <div class="-mx-4 flex flex-wrap lg:justify-between">
         <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
           <div class="mb-12 max-w-[570px] lg:mb-0">
             <h2
               class="text-dark mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]"
             >
-              LET'S CHAT!
+              GET IN TOUCH!
             </h2>
             <p class="text-body-color mb-14 text-base leading-relaxed">
               Contact me to find out more about packages, rates and
@@ -27,7 +31,7 @@ import ContactCard from "./ContactCard.vue";
           </div>
         </div>
         <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
-          <div class="relative rounded-lg bg-red-900 p-8 shadow-lg sm:p-12">
+          <div class="relative rounded-lg bg-zinc-900 p-8 shadow-lg sm:p-12">
             <form>
               <div class="mb-6">
                 <input
@@ -60,7 +64,7 @@ import ContactCard from "./ContactCard.vue";
               <div>
                 <button
                   type="submit"
-                  class="bg-primary border-primary w-full rounded border p-3 text-white transition hover:bg-opacity-90"
+                  class="mr-2 w-full rounded-lg bg-gradient-to-br from-pink-500 to-orange-400 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:outline-none focus:ring-4 focus:ring-pink-200 dark:focus:ring-pink-800"
                 >
                   Send Message
                 </button>
@@ -70,5 +74,5 @@ import ContactCard from "./ContactCard.vue";
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>

@@ -1,30 +1,48 @@
 <script setup lang="ts">
+import { ref } from "vue";
+import PackageMoreInformation from "./PackageMoreInformation.vue";
+import IconClose from "../icons/IconClose.vue";
+import.meta.env.BASE_URL;
+
 const props = defineProps<{ packageTitle: string; imageSrc: string }>();
 
+const showMoreInformation = ref(false);
+
 let packageTitleTextColor = "";
+let packageText = "";
+let packageImgSrc = "src/assets/photos/CloseUp.jpg";
+
+const packageTextBronze = `One choreographed performance during the event.`;
+const packageTextSilver = `One choreographed performance and one ambient set during the event.`;
+const packageTextGold = `One choreographed performance and two ambient sets (or two performances and one ambient set) during the event.`;
 
 console.log(props.packageTitle);
 
 switch (props.packageTitle) {
   case "Bronze":
     packageTitleTextColor = "#b55538";
+    packageText = packageTextBronze;
+    packageImgSrc = "src/assets/photos/CloseUp.jpg";
     break;
   case "Silver":
     packageTitleTextColor = "#A2A2A2";
+    packageText = packageTextSilver;
+    packageImgSrc = "src/assets/photos/ManInMoon.jpg";
     break;
   case "Gold":
     packageTitleTextColor = "#FAAE37";
+    packageText = packageTextGold;
+    packageImgSrc = "src/assets/photos/FloorPose.jpg";
     break;
   default:
     packageTitleTextColor = "white";
+    packageText = "";
     break;
 }
 
 const packageTitleStyle = {
   color: packageTitleTextColor,
 };
-
-import.meta.env.BASE_URL;
 </script>
 
 <template>
@@ -43,11 +61,12 @@ import.meta.env.BASE_URL;
           {{ packageTitle }}
         </h5>
         <p class="mb-4 text-base text-neutral-200 dark:text-neutral-200">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {{ packageText }}
         </p>
         <div class="flex flex-row justify-center">
           <button
+            v-if="!showMoreInformation"
+            @click="showMoreInformation = true"
             class="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-orange-400 to-red-500 p-0.5 text-sm font-medium text-neutral-200 hover:text-white focus:outline-none focus:ring-4 focus:ring-pink-200 group-hover:from-pink-500 group-hover:to-orange-400 dark:text-white dark:focus:ring-pink-800"
           >
             <span
@@ -62,6 +81,14 @@ import.meta.env.BASE_URL;
           >
             More Information
           </button> -->
+          <div v-if="showMoreInformation">
+            <button @click="showMoreInformation = false" class="text-white">
+              <IconClose></IconClose>
+            </button>
+            <PackageMoreInformation
+              :package-title="packageTitle"
+            ></PackageMoreInformation>
+          </div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ import MenuButton from "../icons/MenuButton.vue";
 import MenuButtonOpen from "../icons/MenuButton.vue";
 import InstagramLogo from "../icons/InstagramLogo.vue";
 import InstagramBlack from "../icons/InstagramBlack.vue";
-import Email2 from "../icons/Email2.vue";
+import Email from "../icons/Email.vue";
 import { useDisplay } from "../assets/composables/use.display";
 import { text } from "stream/consumers";
 import NavItem from "./NavItem.vue";
@@ -50,13 +50,13 @@ onClickOutside(componentWrapperElement, () => {
             alt="The Bollywood Hoop Artist"
           /> -->
           <img
-            class="hidden h-12 md:block lg:block"
+            class="hidden h-10 md:block lg:block"
             src="../assets/svg/nobackground-amazon-CROPPED.png"
             alt="The Bollywood Hoop Artist"
           />
         </div>
 
-        <div class="flex flex-1 sm:items-stretch sm:justify-center">
+        <div class="flex flex-1 justify-center sm:items-stretch">
           <!-- NAV ITEMS -->
 
           <div class="sm:ml-6 sm:block">
@@ -82,14 +82,17 @@ onClickOutside(componentWrapperElement, () => {
         </div>
 
         <!-- Insta and Email -->
-        <div class="flex flex-shrink">
+        <div class="flex hidden flex-shrink sm:block">
           <div class="relative ml-3">
             <div class="flex flex-row">
               <button @click="openInstagram">
-                <InstagramBlack class="h-5 w-5 sm:h-7 sm:w-7"></InstagramBlack>
+                <InstagramLogo class="h-5 w-5 sm:h-6 sm:w-6"></InstagramLogo>
               </button>
               <button @click="emailMe">
-                <Email2 class="h-4 w-4 sm:h-6 sm:w-6"></Email2>
+                <Email
+                  v-if="activePage != 'Home'"
+                  class="h-4 w-4 sm:h-5 sm:w-5"
+                ></Email>
               </button>
             </div>
           </div>

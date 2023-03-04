@@ -36,7 +36,7 @@ const images = ref([
       >
         <img
           src="../assets/photos/Amazon.jpg"
-          class="w-60 border-4 border-white shadow-xl hover:scale-150"
+          class="w-60 rounded border-4 border-white shadow-xl hover:scale-150"
         />
         <img
           src="../assets/photos/BendyWaist.jpg"

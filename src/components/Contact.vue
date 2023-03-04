@@ -45,6 +45,9 @@ async function sendEnquiry() {
   senderPhone.value = "";
   senderMessage.value = "";
 }
+
+const formInputClass =
+  "text-sm text-body-color w-full rounded border border-[f0f0f0] py-3 px-[14px] text-base outline-none focus:border-rose-400 focus-visible:shadow-none";
 </script>
 
 <template>
@@ -57,7 +60,7 @@ async function sendEnquiry() {
       class="relative inset-0 z-0 object-cover"
     /> -->
     <div class="container mx-auto flex">
-      <div class="-mx-4 flex flex-wrap lg:justify-between">
+      <div class="mt-10 flex flex-wrap lg:justify-between">
         <div class="w-full px-4 lg:w-1/2 xl:w-6/12">
           <div class="mb-12 max-w-[570px] lg:mb-0">
             <h2
@@ -65,7 +68,7 @@ async function sendEnquiry() {
             >
               GET IN TOUCH!
             </h2>
-            <p class="text-body-color mb-14 text-base leading-relaxed">
+            <p class="text-body-color mb-8 text-base leading-relaxed sm:mb-14">
               Contact me to find out more about packages, rates and
               availability. We can talk through your requirements and see if we
               can create a package bespoke to your needs.
@@ -85,7 +88,7 @@ async function sendEnquiry() {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  class="text-body-color focus:border-primary w-full rounded border border-[f0f0f0] py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  :class="formInputClass"
                   v-model="senderName"
                   name="senderName"
                 />
@@ -94,7 +97,7 @@ async function sendEnquiry() {
                 <input
                   type="text"
                   placeholder="Your Email"
-                  class="text-body-color focus:border-primary w-full rounded border border-[f0f0f0] py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  :class="formInputClass"
                   v-model="senderEmail"
                   name="senderEmail"
                 />
@@ -103,16 +106,16 @@ async function sendEnquiry() {
                 <input
                   type="text"
                   placeholder="Your Phone"
-                  class="text-body-color focus:border-primary w-full rounded border border-[f0f0f0] py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  :class="formInputClass"
                   v-model="senderPhone"
                   name="senderPhone"
                 />
               </div>
               <div class="mb-6">
                 <textarea
-                  rows="6"
+                  rows="5"
                   placeholder="Your Message"
-                  class="text-body-color focus:border-primary w-full resize-none rounded border border-[f0f0f0] py-3 px-[14px] text-base outline-none focus-visible:shadow-none"
+                  :class="formInputClass"
                   v-model="senderMessage"
                   name="senderMessage"
                 ></textarea>

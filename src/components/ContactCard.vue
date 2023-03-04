@@ -28,7 +28,7 @@ switch (props.icon) {
 </script>
 
 <template>
-  <div class="mb-1 flex h-14 w-3/4 flex-row sm:h-20 sm:w-2/3">
+  <div class="mb-1 flex h-14 w-4/5 flex-row sm:h-20 sm:w-2/3">
     <IconPhone v-if="icon == 'phone'" class="h-1/3 w-1/3"></IconPhone>
     <Email2
       v-if="icon == 'email'"

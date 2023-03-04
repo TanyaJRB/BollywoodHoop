@@ -64,7 +64,7 @@ const packageTitleStyle = {
             class="group relative mb-2 mr-2 inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-orange-400 to-red-500 p-0.5 text-sm font-medium text-neutral-200 hover:text-white focus:outline-none focus:ring-4 focus:ring-pink-200 group-hover:from-pink-500 group-hover:to-orange-400 dark:text-white dark:focus:ring-pink-800"
           >
             <span
-              class="relative rounded-md bg-stone-800 px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900"
+              class="relative rounded-md bg-stone-900 px-5 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-gray-900"
             >
               More Information
             </span>

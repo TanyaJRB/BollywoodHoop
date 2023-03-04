@@ -82,16 +82,14 @@ onClickOutside(componentWrapperElement, () => {
         </div>
 
         <!-- Insta and Email -->
-        <div
-          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
-        >
+        <div class="flex flex-shrink">
           <div class="relative ml-3">
-            <div class="grid grid-cols-2">
+            <div class="flex flex-row">
               <button @click="openInstagram">
-                <InstagramBlack class="h-6 w-6 sm:h-7 sm:w-7"></InstagramBlack>
+                <InstagramBlack class="h-5 w-5 sm:h-7 sm:w-7"></InstagramBlack>
               </button>
               <button @click="emailMe">
-                <Email2 class="h-4 sm:h-6 sm:w-6"></Email2>
+                <Email2 class="h-4 w-4 sm:h-6 sm:w-6"></Email2>
               </button>
             </div>
           </div>

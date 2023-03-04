@@ -53,7 +53,7 @@ const formInputClass =
 <template>
   <!-- ====== Contact Section Start -->
   <div
-    class="flex w-full overflow-hidden bg-gradient-to-r from-rose-400 to-orange-300 p-14 lg:p-40 lg:py-[120px]"
+    class="flex h-screen max-h-full w-full overflow-hidden bg-gradient-to-r from-rose-400 to-orange-300 p-14 lg:p-40 lg:py-[120px]"
   >
     <!-- <img
       src="../assets/photos/CloseUp.jpg"

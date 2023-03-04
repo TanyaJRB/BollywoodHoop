@@ -9,7 +9,7 @@ const { currentRoute } = useDisplay();
 const navTextClass = computed<string>(() => {
   const old = "sm:text-m rounded-md px-3 py-3 text-sm font-medium ";
   const baseClass =
-    "text-black hover:bg-black hover:text-white font-sans font-thin text-xs rounded-md p-2 tracking-widest";
+    "text-black hover:bg-black hover:text-white font-thin text-xs rounded-md p-2 tracking-widest";
   const homeClass =
     baseClass + " text-black hover:bg-stone-800 hover:text-white";
   const otherPagesClass =

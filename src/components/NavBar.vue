@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed, onMounted, reactive, ref } from "vue";
 import { onClickOutside } from "@vueuse/core";
 import MenuButton from "../icons/MenuButton.vue";
 import MenuButtonOpen from "../icons/MenuButton.vue";
@@ -11,10 +11,11 @@ import { text } from "stream/consumers";
 import NavItem from "./NavItem.vue";
 import { useRouter, useRoute, RouteLocationNormalizedLoaded } from "vue-router";
 
-const { openInstagram, emailMe, activePage } = useDisplay();
+const { openInstagram, emailMe, currentRoute } = useDisplay();
 
 const navClass = computed<string>(() => {
-  const isHomePageOpen = activePage.value == "Home";
+  console.log(currentRoute.value);
+  const isHomePageOpen = currentRoute.value == "HomePage";
   const navClass = isHomePageOpen
     ? "absolute z-20 w-screen"
     : "absolute z-20 w-screen bg-stone-800";
@@ -41,7 +42,7 @@ onClickOutside(componentWrapperElement, () => {
 <template>
   <nav :class="navClass">
     <div class="mx-auto px-2 sm:px-6 lg:px-8">
-      <div class="relative flex h-12 items-center justify-between">
+      <div class="relative flex items-center justify-between">
         <!-- LOGO -->
         <div class="flex flex-shrink-0 items-center">
           <!-- <img
@@ -90,7 +91,7 @@ onClickOutside(componentWrapperElement, () => {
               </button>
               <button @click="emailMe">
                 <Email
-                  v-if="activePage != 'Home'"
+                  v-if="currentRoute != 'HomePage'"
                   class="h-4 w-4 sm:h-5 sm:w-5"
                 ></Email>
               </button>

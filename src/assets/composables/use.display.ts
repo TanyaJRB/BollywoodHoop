@@ -1,17 +1,17 @@
 import { createSharedComposable } from "@vueuse/core";
-import { Ref, ref } from "vue";
-
-const isHomePageOpen = ref(true);
-const activePage = ref("Home");
+import { computed, Ref, ref } from "vue";
+import { useRoute } from "vue-router";
 
 interface useDisplayReturn {
   openInstagram: () => void;
   emailMe: () => void;
-  isHomePageOpen: Ref<boolean>;
-  activePage: Ref<string>;
+  currentRoute: Ref<string>;
 }
 
 function useDisplayComposable(): useDisplayReturn {
+  const router = useRoute();
+  const currentRoute = computed<string>(() => router.name as string);
+
   function openInstagram() {
     window.open(
       "https://instagram.com/bollywoodaerialist?igshid=YmMyMTA2M2Y=",
@@ -25,8 +25,7 @@ function useDisplayComposable(): useDisplayReturn {
   return {
     openInstagram,
     emailMe,
-    isHomePageOpen,
-    activePage,
+    currentRoute,
   };
 }
 

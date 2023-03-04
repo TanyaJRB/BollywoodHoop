@@ -4,7 +4,7 @@ import PackageCard from "./PackageCard.vue";
 
 <template>
   <div
-    class="container h-full max-w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800"
+    class="container h-full min-h-screen max-w-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800"
   >
     <div
       class="flex justify-center gap-10 px-20 pb-20 pt-32 max-[821px]:flex-col"

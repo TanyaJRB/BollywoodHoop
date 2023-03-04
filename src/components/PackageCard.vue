@@ -10,25 +10,25 @@ const showMoreInformation = ref(false);
 
 let packageTitleTextColor = "";
 let packageText = "";
-let packageImgSrc = "src/assets/photos/CloseUp.jpg";
+let packageImgSrc = new URL("/src/assets/photos/CloseUp.jpg", import.meta.url);
 
 switch (props.packageTitle) {
   case "Bronze":
     packageTitleTextColor = "#b55538";
     packageText = "One choreographed performance during the event.";
-    packageImgSrc = "src/assets/photos/CloseUp.jpg";
+    packageImgSrc = new URL("/src/assets/photos/CloseUp.jpg", import.meta.url);
     break;
   case "Silver":
     packageTitleTextColor = "#A2A2A2";
     packageText =
       "One choreographed performance and one ambient set during the event.";
-    packageImgSrc = "src/assets/photos/ManInMoon.jpg";
+    packageImgSrc = new URL("/src/assets/photos/CloseUp.jpg", import.meta.url);
     break;
   case "Gold":
     packageTitleTextColor = "#FAAE37";
     packageText =
       "One choreographed performance and two ambient sets (or two performances and one ambient set) during the event.";
-    packageImgSrc = "src/assets/photos/FloorPose.jpg";
+    packageImgSrc = new URL("/src/assets/photos/CloseUp.jpg", import.meta.url);
     break;
   default:
     packageTitleTextColor = "white";

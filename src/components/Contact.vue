@@ -31,6 +31,10 @@ async function sendEnquiry() {
       (result) => {
         console.log("SUCCESS!", result);
         enquirySubmitted.value = true;
+        senderEmail.value = null;
+        senderName.value = "";
+        senderPhone.value = "";
+        senderMessage.value = "";
       },
       (error) => {
         alert(
@@ -39,11 +43,6 @@ async function sendEnquiry() {
         console.log("FAILED...", error);
       }
     );
-
-  senderEmail.value = null;
-  senderName.value = "";
-  senderPhone.value = "";
-  senderMessage.value = "";
 }
 
 const formInputClass =

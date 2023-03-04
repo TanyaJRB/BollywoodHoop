@@ -31,7 +31,7 @@ const imagesWide = ref([
   >
     <div class="mt-auto flex flex-col justify-center bg-black px-10 sm:px-28">
       <div
-        class="grid grid-cols-2 justify-center gap-2 pb-5 sm:grid-cols-4 sm:gap-5"
+        class="grid grid-cols-2 justify-center gap-2 pb-2 sm:grid-cols-4 sm:gap-5 sm:pb-5"
       >
         <img
           v-for="image in imagesNarrow"

@@ -29,9 +29,7 @@ const images = ref([
       src="../assets/wallpaper-fort.jpg"
       class="relative z-0 w-full bg-repeat-x object-cover"
     /> -->
-  <div
-    class="container absolute z-10 flex flex-col justify-center bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800"
-  >
+  <div class="container absolute z-10 flex flex-col justify-center bg-black">
     <div class="relative z-20 mx-28 mt-28 h-full rounded">
       <div
         class="grid grid-flow-col grid-rows-2 justify-center gap-5 px-5 pt-5 pb-10"

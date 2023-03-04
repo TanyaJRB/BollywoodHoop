@@ -17,7 +17,7 @@ const navClass = computed<string>(() => {
   const isHomePageOpen = activePage.value == "Home";
   const navClass = isHomePageOpen
     ? "absolute z-20 w-screen"
-    : "absolute z-20 w-screen bg-stone-900";
+    : "absolute z-20 w-screen bg-stone-800";
   return navClass;
 });
 

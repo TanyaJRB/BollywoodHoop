@@ -76,7 +76,7 @@ async function sendEnquiry() {
           </div>
         </div>
         <div class="w-full px-4 lg:w-1/2 xl:w-5/12">
-          <div class="relative rounded-lg bg-zinc-900 p-8 shadow-lg sm:p-12">
+          <div class="relative rounded-lg bg-stone-800 p-8 shadow-lg sm:p-12">
             <div v-if="enquirySubmitted" class="py-20 text-white">
               Thanks for your enquiry! We will be in touch.
             </div>

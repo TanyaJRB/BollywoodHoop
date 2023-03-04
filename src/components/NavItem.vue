@@ -24,9 +24,10 @@ const navTextClass = computed<string>(() => {
   const homeClass =
     baseClass + " text-black hover:bg-stone-800 hover:text-white";
   const otherPagesClass =
-    baseClass + " text-white hover:bg-stone-200 hover:text-black";
+    baseClass + " text-white hover:bg-stone-300 hover:text-black";
 
-  const activePageClass = baseClass + " text-white bg-stone-500";
+  const activePageClass =
+    baseClass + " text-white bg-stone-500 shadow-lg shadow-dark-500/50";
   const isHomePageOpen = activePage.value == "Home";
   const textClass = isHomePageOpen
     ? homeClass

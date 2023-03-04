@@ -15,7 +15,7 @@
       src="../assets/photos/CloseUp.jpg"
       class="relative z-0 hidden h-screen w-full object-cover lg:block"
     />
-    <div class="absolute inset-0 z-10 flex items-center justify-center">
+    <div class="absolute inset-0 z-10 m-5 flex items-center justify-center">
       <img
         src="../assets/bollywood-aerialist-logo.png"
         class="hidden pt-80 sm:block"

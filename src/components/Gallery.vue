@@ -26,18 +26,22 @@ const imagesWide = ref([
 </script>
 
 <template>
-  <div class="flex h-screen h-full max-w-full flex-col justify-center bg-black">
-    <div class="mt-40 flex flex-col justify-center bg-black px-28 pt-96">
-      <div class="grid grid-cols-4 justify-center gap-5 px-5 pt-20 pb-10">
+  <div
+    class="relative z-10 flex h-full max-w-full flex-col justify-center bg-black pt-28"
+  >
+    <div class="mt-auto flex flex-col justify-center bg-black px-10 sm:px-28">
+      <div
+        class="grid grid-cols-2 justify-center gap-2 pb-5 sm:grid-cols-4 sm:gap-5"
+      >
         <img
           v-for="image in imagesNarrow"
           :key="image.alt"
           :src="image.url"
-          class="w-60 rounded border-4 border-white shadow-xl hover:scale-150"
+          class="w-full rounded border-4 border-white shadow-xl hover:scale-150"
         />
       </div>
       <div
-        class="grid grid-cols-3 justify-center justify-items-center gap-5 px-10 pb-10"
+        class="grid grid-cols-1 justify-center justify-items-center gap-2 pb-10 sm:grid-cols-3 sm:gap-5"
       >
         <img
           v-for="image in imagesWide"

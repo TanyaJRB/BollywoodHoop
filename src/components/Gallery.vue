@@ -7,55 +7,117 @@ const backgroundImageUrl = new URL(
   import.meta.url
 ).href;
 
+import amazon from "/src/assets/photos/Amazon.jpg";
+import waistBalance from "/src/assets/photos/WaistBalance.jpg";
+import singleLegTop from "/src/assets/photos/SingleLegTop.jpg";
+import standingpose2 from "/src/assets/photos/StandingPose2.jpg";
+import pushAway from "/src/assets/photos/PushAway.jpg";
+import standingpose1 from "/src/assets/photos/StandingPose1.jpg";
+import BendyWaist from "/src/assets/photos/BendyWaist.jpg";
+import WineGlass from "/src/assets/photos/WineGlass.jpg";
+import CloseUp from "/src/assets/photos/CloseUp.jpg";
+import FloorPose from "/src/assets/photos/FloorPose.jpg";
+import ManInMoon from "/src/assets/photos/ManInMoon.jpg";
+
 const imagesNarrow = ref([
   {
-    url: new URL("/src/assets/photos/Amazon.jpg", import.meta.url),
+    url: amazon,
     alt: "Img1",
   },
   {
-    url: new URL("/src/assets/photos/WaistBalance.jpg", import.meta.url),
+    url: waistBalance,
     alt: "Img2",
   },
   {
-    url: new URL("/src/assets/photos/SingleLegTop.jpg", import.meta.url),
+    url: singleLegTop,
     alt: "Img3",
   },
   {
-    url: new URL("/src/assets/photos/StandingPose2.jpg", import.meta.url),
+    url: standingpose2,
     alt: "Img4",
   },
   {
-    url: new URL("/src/assets/photos/PushAway.jpg", import.meta.url),
+    url: pushAway,
     alt: "Img5",
   },
   {
-    url: new URL("/src/assets/photos/StandingPose1.jpg", import.meta.url),
+    url: standingpose1,
     alt: "Img6",
   },
   {
-    url: new URL("/src/assets/photos/BendyWaist.jpg", import.meta.url),
+    url: standingpose2,
     alt: "Img7",
   },
   {
-    url: new URL("/src/assets/photos/WineGlass.jpg", import.meta.url),
+    url: WineGlass,
     alt: "Img8",
   },
 ]);
 
 const imagesWide = ref([
   {
-    url: new URL("/src/assets/photos/CloseUp.jpg", import.meta.url),
+    url: CloseUp,
     alt: "Img9",
   },
   {
-    url: new URL("/src/assets/photos/FloorPose.jpg", import.meta.url),
+    url: FloorPose,
     alt: "Img10",
   },
   {
-    url: new URL("/src/assets/photos/ManInMoon.jpg", import.meta.url),
+    url: ManInMoon,
     alt: "Img10",
   },
 ]);
+
+// const imagesNarrow = ref([
+//   {
+//     url: new URL("/src/assets/photos/Amazon.jpg", import.meta.url),
+//     alt: "Img1",
+//   },
+//   {
+//     url: new URL("/src/assets/photos/WaistBalance.jpg", import.meta.url),
+//     alt: "Img2",
+//   },
+//   {
+//     url: new URL("/src/assets/photos/SingleLegTop.jpg", import.meta.url),
+//     alt: "Img3",
+//   },
+//   {
+//     url: new URL("/src/assets/photos/StandingPose2.jpg", import.meta.url),
+//     alt: "Img4",
+//   },
+//   {
+//     url: new URL("/src/assets/photos/PushAway.jpg", import.meta.url),
+//     alt: "Img5",
+//   },
+//   {
+//     url: new URL("/src/assets/photos/StandingPose1.jpg", import.meta.url),
+//     alt: "Img6",
+//   },
+//   {
+//     url: new URL("/src/assets/photos/BendyWaist.jpg", import.meta.url),
+//     alt: "Img7",
+//   },
+//   {
+//     url: new URL("/src/assets/photos/WineGlass.jpg", import.meta.url),
+//     alt: "Img8",
+//   },
+// ]);
+
+// const imagesWide = ref([
+//   {
+//     url: new URL("/src/assets/photos/CloseUp.jpg", import.meta.url),
+//     alt: "Img9",
+//   },
+//   {
+//     url: new URL("/src/assets/photos/FloorPose.jpg", import.meta.url),
+//     alt: "Img10",
+//   },
+//   {
+//     url: new URL("/src/assets/photos/ManInMoon.jpg", import.meta.url),
+//     alt: "Img10",
+//   },
+// ]);
 </script>
 
 <template>

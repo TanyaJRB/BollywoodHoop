@@ -4,31 +4,35 @@ import PackageMoreInformation from "./PackageMoreInformation.vue";
 import IconClose from "../icons/IconClose.vue";
 import.meta.env.BASE_URL;
 
+import CloseUp from "/src/assets/photos/CloseUp.jpg";
+import FloorPose from "/src/assets/photos/FloorPose.jpg";
+import ManInMoon from "/src/assets/photos/ManInMoon.jpg";
+
 const props = defineProps<{ packageTitle: string }>();
 
 const showMoreInformation = ref(false);
 
 let packageTitleTextColor = "";
 let packageText = "";
-let packageImgSrc = new URL("/src/assets/photos/CloseUp.jpg", import.meta.url);
+let packageImgSrc = ManInMoon;
 
 switch (props.packageTitle) {
   case "Bronze":
     packageTitleTextColor = "#b55538";
     packageText = "One choreographed performance during the event.";
-    packageImgSrc = new URL("/src/assets/photos/CloseUp.jpg", import.meta.url);
+    packageImgSrc = CloseUp;
     break;
   case "Silver":
     packageTitleTextColor = "#A2A2A2";
     packageText =
       "One choreographed performance and one ambient set during the event.";
-    packageImgSrc = new URL("/src/assets/photos/CloseUp.jpg", import.meta.url);
+    packageImgSrc = ManInMoon;
     break;
   case "Gold":
     packageTitleTextColor = "#FAAE37";
     packageText =
       "One choreographed performance and two ambient sets (or two performances and one ambient set) during the event.";
-    packageImgSrc = new URL("/src/assets/photos/CloseUp.jpg", import.meta.url);
+    packageImgSrc = FloorPose;
     break;
   default:
     packageTitleTextColor = "white";

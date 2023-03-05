@@ -29,20 +29,17 @@ async function sendEnquiry() {
     .send("BollywoodHoop", "template_9b0c5po", formObject, "X8scW6sUVAEqCH1Ap")
     .then(
       (result) => {
-        console.log("SUCCESS!", result);
-        enquirySubmitted.value = true;
         senderEmail.value = null;
         senderName.value = "";
         senderPhone.value = "";
         senderMessage.value = "";
       },
       (error) => {
-        alert(
-          "There was an error submitting the form. Please try again or send us an email using the address provided."
-        );
         console.log("FAILED...", error);
       }
     );
+
+  enquirySubmitted.value = true;
 }
 
 const formInputClass =

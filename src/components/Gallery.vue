@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { ref, watchEffect } from "vue";
 import backgroundImageGallery from "/src/assets/wallpaper-fort.jpg";
-
-const backgroundImageUrl = new URL(
-  "../assets/wallpaper-fort.jpg",
-  import.meta.url
-).href;
-
 import amazon from "/src/assets/photos/Amazon.jpg";
 import waistBalance from "/src/assets/photos/WaistBalance.jpg";
 import singleLegTop from "/src/assets/photos/SingleLegTop.jpg";
@@ -18,6 +12,11 @@ import WineGlass from "/src/assets/photos/WineGlass.jpg";
 import CloseUp from "/src/assets/photos/CloseUp.jpg";
 import FloorPose from "/src/assets/photos/FloorPose.jpg";
 import ManInMoon from "/src/assets/photos/ManInMoon.jpg";
+
+const backgroundImageUrl = new URL(
+  "../assets/wallpaper-fort.jpg",
+  import.meta.url
+).href;
 
 const imagesNarrow = ref([
   {

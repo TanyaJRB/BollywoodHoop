@@ -1,12 +1,11 @@
 <script setup lang="ts">
+import CloseUp from "/src/assets/photos/CloseUp.jpg";
+import FloorPose from "/src/assets/photos/FloorPose.jpg";
+import ManInMoon from "/src/assets/photos/ManInMoon.jpg";
 import { ref } from "vue";
 import PackageMoreInformation from "./PackageMoreInformation.vue";
 import IconClose from "../icons/IconClose.vue";
 import.meta.env.BASE_URL;
-
-import CloseUp from "/src/assets/photos/CloseUp.jpg";
-import FloorPose from "/src/assets/photos/FloorPose.jpg";
-import ManInMoon from "/src/assets/photos/ManInMoon.jpg";
 
 const props = defineProps<{ packageTitle: string }>();
 

@@ -14,7 +14,7 @@ let cardTitle = "";
 switch (props.icon) {
   case "phone":
     cardTitle = "Phone / Whatsapp";
-    cardText = "+44 7392 260 579";
+    cardText = "Please email for Whatsapp.";
     break;
   case "email":
     cardTitle = "Email";
